@@ -800,6 +800,16 @@ class Country
     }
 
     /**
+     * Determine whether the country requires GDPR.
+     *
+     * @return bool|null
+     */
+    public function isGdpr()
+    {
+        return $this->get('extra.gdpr');
+    }
+
+    /**
      * Get the VAT rates.
      *
      * @return array|null

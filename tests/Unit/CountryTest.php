@@ -1176,6 +1176,20 @@ class CountryTest extends TestCase
     }
 
     /** @test */
+    public function it_returns_whether_gdpr()
+    {
+        $this->assertEquals($this->longAttributes['extra']['gdpr'], $this->longCountry->isGdpr());
+    }
+
+    /** @test */
+    public function it_returns_null_when_missing_gdpr_status()
+    {
+        $this->longCountry->setAttributes([]);
+
+        $this->assertNull($this->longCountry->isGdpr());
+    }
+
+    /** @test */
     public function it_returns_vat_rates()
     {
         $this->assertEquals($this->longAttributes['extra']['vat_rates'], $this->longCountry->getVatRates());
