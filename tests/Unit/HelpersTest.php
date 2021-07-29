@@ -105,6 +105,7 @@ class HelpersTest extends TestCase
                 'ar5' => 'MAF',
                 'address_format' => "{{recipient}}\n{{street}}\n{{postalcode}} {{city}}\n{{country}}",
                 'eu_member' => null,
+                'gdpr' =>null,
                 'vat_rates' => null,
                 'emoji' => '🇪🇬',
             ],
